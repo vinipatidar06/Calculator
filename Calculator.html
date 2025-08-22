@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets\css\Calculator.css">
+</head>
+<body>
+  <center>
+   <div class="Main">
+    <div class="div1">
+      <h1 class="Heading"> Calculator using Multifunction:)</h1>
+    	<input type="number" placeholder="Enter 1st no.:" id="n1"><br><br>
+    	<input type="number" placeholder="Enter 2nd no.:" id="n2"><br><br>
+    	<button type="button" onclick="Sum()"> + </button>
+    	<button type="button" onclick="Sub()"> - </button>
+    	<button type="button" onclick="Mul()"> * </button>
+    	<button type="button" onclick="Div()"> / </button><br><br>
+      <input id="result1" placeholder="Result"></input>
+    </div>
+    
+    <div class="div2">
+      <h1 class="Heading"> Calculator using Onefunction:)</h1>
+      <input type="number" placeholder="Enter 1st no.:" id="n3"><br><br>
+      <input type="number" placeholder="Enter 2nd no.:" id="n4"><br><br>
+      <button type="button" onclick="ManageTotal('+')"> + </button>
+      <button type="button" onclick="ManageTotal('-')"> - </button>
+      <button type="button" onclick="ManageTotal('*')"> * </button>
+      <button type="button" onclick="ManageTotal('/')"> / </button><br><br>
+      <input id="result2" placeholder="Result"></input>
+    </div>
+   </div>
+  </center>
+    <script type="text/javascript">
+      function Sum(){
+    	var a=parseInt(n1.value);
+    	var b=parseInt(n2.value);
+        	var Add=a+b;
+        	result1.value=Add;
+        }
+      function Sub(){
+    	var a=parseInt(n1.value);
+    	var b=parseInt(n2.value);
+        	var sub=a-b;
+        	result1.value=sub;
+        }
+      function Mul(){
+    	var a=parseInt(n1.value);
+    	var b=parseInt(n2.value);
+        	var mul=a*b;
+        	result1.value=mul;
+        }
+      function Div(){
+    	var a=parseInt(n1.value);
+    	var b=parseInt(n2.value);
+        	var div=a/b;
+        	result1.value=div;
+        }
+ 
+   
+      function ManageTotal(Oper) {
+      var x=parseInt(n3.value);
+      var y=parseInt(n4.value);
+         if(Oper=='+'){
+          var C=x+y;
+         }
+          if(Oper=='-'){
+          var C=x-y;
+         }
+          if(Oper=='*'){
+          var C=x*y;
+         }
+          if(Oper=='/'){
+          var C=x/y;
+         }
+         result2.value=C;
+    }  
+    </script>
+</body>
+</html>
